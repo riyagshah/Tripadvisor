@@ -1,0 +1,41 @@
+.foot{
+    
+    display: flex;
+    justify-content: space-around;
+}
+.spantag{
+    font: 2px;
+}
+.child{
+    display: flex;
+    font-size: 20px;
+}
+.child1{
+    text-decoration: underline;
+
+}
+
+.lastbox{
+  
+    box-sizing: border-box;
+    width: 621px;
+    height: 30px;
+    font-size: 11px;
+    color: darkgrey
+}
+.mother{
+    display: flex;
+}
+
+.input1{
+    width: 126px;
+    height: 24px;
+    margin: 13px 11px 0px 0px;
+}
+.main1{
+
+    height: 150px;
+    /* margin: 22px 80px 24px 169px; */
+    background: #faf1ed;
+    width: 100%;
+}
