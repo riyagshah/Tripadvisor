@@ -2,10 +2,11 @@ import React from 'react'
 import styled from "styled-components"
 import styles from './TopSection.module.css'
 import InputDate from './InputDate'
+import Background from '../utils/pexels-photo-1174732.jpeg'
 
 const Wrapper = styled.div`
   height: 251px;
-  background: papayawhip;
+  background: #ffffff;
 `;
 
 const Heading = styled.h1`
@@ -20,17 +21,16 @@ const Subheading = styled.h6`
 
 const TopSection = () => {
     return (
-      <Wrapper>
+      <Wrapper style={{ backgroundImage: `url(${Background})`,backgroundRepeat:'no-repeat',maxWidth: "100%",maxHeight: "100%",backgroundSize: "cover", strech:'no-strech'}}>
         <div className= {styles.centerBox}>
-          <Heading style={{ textAlign: "center" }}>
+          <Heading style={{ textAlign: "center" ,color: '#ffffff'}}>
             Goa Hotels and Places to Stay
           </Heading>
-          <Subheading style={{ textAlign: "center" }}>
+          <Subheading style={{ textAlign: "center" , color: '#ffffff'}}>
             Enter dates to find the best prices
           </Subheading>
           <InputDate/>
         </div>
-
       </Wrapper>
     );
 }
