@@ -1,4 +1,4 @@
-import TopSection from './Components/TopSection'
+import TopSection from './Components/HotelPage/TopSection'
 
 function App() {
   return (
