@@ -1,4 +1,4 @@
-import React, {useState}from 'react'
+import React, {useState, useEffect} from 'react'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 ////import {Carousel} from 'react-responsive-carousel'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -19,17 +19,35 @@ setInputText(e.target.value)
 }
     const directhotel=(e)=>{
     setInputText(e.target.value)
+
     console.log(InputText)
         
 
 
 }
-    
+
+let [over,setOver]=useState(false);
+const el = document.getElementById("contain")
+const searchbar1=document.getElementById("seachbar1")
+console.log(searchbar1)
+console.log(el)
+useEffect(() => {
+    console.log(over)
+if(over)
+{
+        el.style.opacity=0.7;
+        
+       
+}
+
+  }, [over,setOver]);
+
+
    
 
      
   return (
-   <div>
+   <div id="contain"  style={{ opacity:!over ?  "":"1"}}>
    
      <div className='main'>
      <div id="navbar">
@@ -123,9 +141,15 @@ setInputText(e.target.value)
   
         <div className="header">
    
-        <input type="text" className="search-bar" placeholder="Where to?" value={InputText} 
+        <input id="seachbar1"type="text" className="search-bar clickme" placeholder="Where to?" value={InputText} 
         onKeyDown={directhotel}
         onChange={handlechange}
+       onMouseEnter={()=>setOver(true)}
+       onMouseLeave={()=>setOver(false)}
+     
+    //    {...over && style={{opacity: 1}}}
+  
+
         />
   
 </div>
@@ -136,14 +160,14 @@ setInputText(e.target.value)
                     <img className="logo-img1" src="data:image/webp;base64,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" alt="trip advisor logo: owl eyes and beak"/>
                     <h3>Tripadvisor Foundation</h3>
                 </div>
-                <h1>Support Ukrainian Relief Efforts</h1>
+                <h1 class="support">Support Ukrainian Relief Efforts</h1>
                 <p>World Central Kitchen and their hundreds of restaurant partners continue to feed families impacted by the crisis in Ukraine. Join us as we support these ongoing efforts serving millions of meals in the region.</p>
                 <a href="/" id="tripadvisor-ukraine-ad-button" className="ad-button text-white bg-black extra btn1">Join Us</a>
             </div>
         </div>
     {/* slider */}
     <div className="fourth_box">
-    <h2 className='left'>You might like these </h2>
+
     <p className='left'>More things to do in Hyderabad</p>
    <div className="boxbest">
    <Carousel cols={4} rows={1} gap={5} loop
@@ -318,7 +342,7 @@ setInputText(e.target.value)
     <div> 
          <img className='owl' src="https://static.tacdn.com/img2/travelers_choice/TC_logomark_solid_cream.svg" alt="" />
 
-       <div className='box'>  <h1>Travellers' Choice Best of the Best</h1></div>
+       <div className='box'>  <h1 class="travel">Travellers' Choice Best of the Best</h1></div>
 
     </div>
     <div>
