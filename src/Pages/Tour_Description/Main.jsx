@@ -1,23 +1,47 @@
 import React from "react";
 import style from "./main.module.css";
-import img1 from "./Images/img1.svg";
-import img2 from "./Images/img2.svg";
-import img3 from "./Images/img3.svg";
-import img4 from "./Images/img4.svg";
-import img5 from "./Images/img5.svg";
-import img6 from "./Images/img6.svg";
-import img7 from "./Images/img7.svg";
-import Carousel from "./slider";
-import { ChakraProvider } from "@chakra-ui/react";
+import img1 from "../Images/img1.svg";
+import img2 from "../Images/img2.svg";
+import img3 from "../Images/img3.svg";
+import img4 from "../Images/img4.svg";
+import img5 from "../Images/img5.svg";
+import img6 from "../Images/img6.svg";
+import img7 from "../Images/img7.svg";
+import bnner1 from "../Images/bnner1.jpg";
+import bnner2 from "../Images/bnner2.jpg";
+import bottom from "../Images/bottom.jpg";
+import data1 from "./data1.json"
+// import Carousel from "./slider";
+// import { ChakraProvider } from "@chakra-ui/react";
+// import FAQs from "./FAQs";
+// import axios from "axios";
+import { Link } from "react-router-dom"
 
 const Main = () => {
+
+   const Data = data1.data1
+   console.log(Data)
+
+const AddToCart =()=>{
+  localStorage.setItem("Data",JSON.stringify(Data)
+
+    )
+  
+   
+}
+
   return (
     <>
       <div className={style.main}>
+        <p style={{ textAlign: "left", fontSize: "14px" }}>
+          Asia {">"} India {">"} Goa {">"} South Goa District {">"} Salcette {">"} Varca {">"} Things to
+          Do in Varca {">"} Varca Tours {">"} Tours and Tickets
+        </p>
         <div className={style.topdiv}>
-          <div className={style.imgdiv} style={{marginTop:"30px"}}>
+          <div className={style.imgdiv} style={{ marginTop: "30px" }}>
             <div>
-              <img style={{height:"500px", width:"550px"}}
+              <img
+                style={{ height: "500px", width: "580px" }}
                 src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/01/a1/13.jpg"
                 alt=""
               />
@@ -53,7 +77,7 @@ const Main = () => {
               <div className={style.heart}>
                 <i className="fa fa-gratipay" aria-hidden="true"></i>
               </div>
-              <p style={{ marginTop: "-3px", marginLeft: "3px" }}>
+              <p style={{ marginTop: "-3px", marginLeft: "5px" }}>
                 {" "}
                 Recommended by 100% of travelers
               </p>
@@ -79,7 +103,11 @@ const Main = () => {
                 </h1>
               </div>
               <div className={style.button}>
-                <button
+
+
+                <Link to="/Cart">
+                <button 
+                onClick={AddToCart}
                   style={{
                     borderRadius: "18px",
                     height: "40px",
@@ -90,8 +118,12 @@ const Main = () => {
                     cursor: "pointer",
                   }}
                 >
-                  <b>Add to Cart</b>
+                  <b >Add to Cart</b>
                 </button>
+                </Link>
+
+
+                <Link to="/Checkout">
                 <button
                   style={{
                     borderRadius: "18px",
@@ -106,6 +138,8 @@ const Main = () => {
                 >
                   <b>Reserve</b>
                 </button>
+                </Link>
+
               </div>
             </div>
             <p style={{ marginTop: "-20px", marginLeft: "3px" }}>per adult</p>
@@ -296,8 +330,68 @@ const Main = () => {
           >
             <p style={{ fontSize: "18px", marginTop: "10px" }}>View details</p>
           </button>
+
+          
+          <br />
+          <br />
+          <br />
+          <br />
+
+          <img src={bnner2} alt="" />
+
+          
+
+          <br />
+          <br />
+
+          <h4>Travel safe during COVID-19</h4>
+          <p>Last updated: Dec 2, 2020</p>
+          <h4>
+            A note from BLive Electric Bike Tours – Countryside Escape to Varca
+          </h4>
+
+          <p>
+            Welcome to BLive - India’s safest EV tourism brand. The experience
+            on our Ebikes follows default social <br /> distancing. Here’s what
+            you need to know: Introducing private tours. Safety kits, sanitizers
+            and masks <br /> provided. Well sanitized Ebikes and accessories.
+            Regular temperature and health checks.
+          </p>
+
+          <h4>What you can expect during your visit</h4>
+
+          <li>Regular temperature checks for staff</li>
+          <li>Regularly sanitized high-traffic areas</li>
+          <li>Temperature checks for tour participants upon arrival</li>
+
+          <button
+            style={{
+              borderRadius: "22px",
+              height: "50px",
+              width: "250px",
+              // marginLeft: "30px",
+              marginTop: "25px",
+              backgroundColor: "white",
+              //   border: "none",
+              cursor: "pointer",
+            }}
+          >
+            <p style={{ fontSize: "18px", marginTop: "10px" }}>
+              View all safety measures
+            </p>
+          </button>
         </div>
-        <div></div>
+        <div>
+          {/* <ChakraProvider>
+            <FAQs />
+          </ChakraProvider> */}
+        </div>
+        <br />
+        <br />
+        <img style={{width:"95%",marginLeft:"-20px"}}src={bnner1} alt="" />
+
+        <img style={{width:"95%",marginTop:"60px",marginLeft:"-40px"}}src={bottom} alt="" />
+
       </div>
     </>
   );

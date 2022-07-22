@@ -1,13 +1,9 @@
-.main{
-    border: 1px solid red;
-    width: 90%;
-    height: 1800px;
-    margin: auto;
-  }
-
-
-
-
+.main {
+  border: 1px solid red;
+  width: 90%;
+  height: 3500px;
+  margin: auto;
+}
 
 .topdiv {
   border: 1px solid red;
@@ -65,21 +61,20 @@
   border-radius: 50px;
 }
 
-.about{
-
-    /* text-align: left; */
-    gap: 200px;
-    display: flex;
+.about {
+  /* text-align: left; */
+  gap: 200px;
+  display: flex;
 }
 
-.mainitem{
-    display: flex;
+.mainitem {
+  display: flex;
 }
 
-.item1{
-    /* display: flex; */
+.item1 {
+  /* display: flex; */
 }
 
-.item2{
-    /* display: flex; */
+.item2 {
+  /* display: flex; */
 }
