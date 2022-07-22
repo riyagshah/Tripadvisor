@@ -1,10 +1,12 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Homepage from './Components/Homepage/Homepage';
+import PopularThings from './Pages/PopularThings';
+
+
 function App() {
   return (
     <div className="App">
-    <Homepage/>
+      <PopularThings />
     </div>
   );
 }
