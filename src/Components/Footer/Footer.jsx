@@ -77,8 +77,8 @@ function Footer() {
                     
 
  
-<FontAwesomeIcon icon={"hello"}></FontAwesomeIcon>
-<FontAwesomeIcon icon={"hello"}></FontAwesomeIcon>
+{/* <FontAwesomeIcon icon={"hello"}></FontAwesomeIcon>
+<FontAwesomeIcon icon={"hello"}></FontAwesomeIcon> */}
                     </div>
                 </div>
             </div>
