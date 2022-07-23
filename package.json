@@ -33,7 +33,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "server": "--watch hotel.data.json --port 8080",
+    "server": "json-server --watch hotel.data.json --port 8080",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

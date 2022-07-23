@@ -31,7 +31,7 @@ const Subheading = styled.h6`
 
 const Body = () => {
   const dispatch = useDispatch();
-  const hotelsData = useSelector((store) => store.app.hotels);
+  const hotelsData = useSelector((store) => console.log(store.app.hotels));
 
   const gethotels = () => {
     dispatch(getHotelsRequest());
@@ -40,8 +40,6 @@ const Body = () => {
       .then((r) => dispatch(getHotelsSuccess(r.data)))
       .catch((e) => dispatch(getHotelsFailure(e)));
   };
-
-  // do npm run server to start the json server
 
   useEffect(() => {
     if (hotelsData?.length === 0) {
@@ -304,28 +302,24 @@ const Body = () => {
         </Box>
       </Stack>
       {/* hotels list */}
-      {hotelsData && hotelsData.map((hotel) => {
-        return <>
-        <Stack w="75%" mt="0px" p="12px">
+      <Stack w="75%" mt="0px" p="12px">
         <Box bg="pink.100" h="280px" w="100">
           <Flex>
             <Image
               mh="280px"
               boxSize="280px"
-              src={`${hotel.img_}`}
+              src="https://bit.ly/dan-abramov"
               alt="hotels"
             />
             <Box p="50px">
-              <Subheading>{hotel.title}</Subheading>
+              <Subheading>heading</Subheading>
               <Spacer />
-              <Subheading m="50%">{hotel.price}</Subheading>
+              <Subheading m="50%">Price</Subheading>
               <Button>View Deal</Button>
             </Box>
           </Flex>
         </Box>
       </Stack>
-        </>
-      })}
     </Flex>
   );
 };
