@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import style from "../Tour_Description/main.module.css";
@@ -17,6 +16,7 @@ const Cart = () => {
             fontSize: "35px",
             textAlign: "left",
             marginLeft: "40px",
+            marginBottom: "20px",
           }}
         >
           Cart
@@ -42,18 +42,30 @@ const Cart = () => {
                     alt="_image"
                   />
                   <div style={{ textAlign: "left" }}>
-                    <h3 style={{ fontWeight: "500" }}>{item.title}</h3>
+                    <h3
+                      style={{
+                        fontWeight: "600",
+                        margin: "10px",
+                        marginLeft: "4px",
+                      }}
+                    >
+                      {item.title}
+                    </h3>
 
                     <div
                       className={style.circles}
-                      style={{ fontWeight: "500", marginTop: "-10px" }}
+                      style={{
+                        fontWeight: "500",
+                        margin: "10px",
+                        marginBottom: "20px",
+                      }}
                     >
                       <i className="fa fa-circle" aria-hidden="true"></i>
                       <i className="fa fa-circle" aria-hidden="true"></i>
                       <i className="fa fa-circle" aria-hidden="true"></i>
                       <i className="fa fa-circle" aria-hidden="true"></i>
                       <i className="fa fa-circle" aria-hidden="true"></i>
-                      <p style={{ marginTop: "-3px", marginLeft: "3px" }}>
+                      <p style={{ marginTop: "-3px", marginLeft: "-5px" }}>
                         <u style={{ color: "black", fontWeight: "bold" }}>
                           355 reviews
                         </u>
@@ -66,7 +78,13 @@ const Cart = () => {
                       >
                         <i className="fa fa-gratipay" aria-hidden="true"></i>
                       </div>
-                      <p style={{ marginTop: "-10px", marginLeft: "5px" }}>
+                      <p
+                        style={{
+                          marginTop: "-16px",
+                          marginLeft: "3px",
+                          marginBottom: "10px",
+                        }}
+                      >
                         {" "}
                         100% of travelers recommend this experience
                       </p>
@@ -76,6 +94,7 @@ const Cart = () => {
                         marginTop: "-10px",
                         marginLeft: "5px",
                         fontSize: "13px",
+                        marginBottom: "5px",
                       }}
                     >
                       B:Live E-bike Tours - Village - 08:00
@@ -116,20 +135,23 @@ const Cart = () => {
                   padding: "20px",
                   marginTop: "50px",
                   height: "350px",
-                  width: "320px",
+                  width: "360px",
                   border: "1px solid black",
                   borderRadius: "10px",
                 }}
               >
-                <h2 style={{ textAlign: "left" }}>Review Order Details</h2>
-                <div style={{ display: "flex" }}>
+                <h2 style={{ textAlign: "left", fontWeight: "600" }}>
+                  Review Order Details
+                </h2>
+                <div style={{ display: "flex", width: "95%" }}>
                   {" "}
                   <p
                     style={{
                       marginRight: "150px",
-                      width: "100px",
+                      width: "200px",
                       textAlign: "left",
                       marginLeft: "5px",
+                      marginBottom:"5px"
                     }}
                   >
                     Booking Fee
@@ -145,6 +167,7 @@ const Cart = () => {
                       textAlign: "left",
                       marginLeft: "5px",
                       marginTop: "-10px",
+                      marginBottom:"5px"
                     }}
                   >
                     Subtotal
@@ -181,8 +204,9 @@ const Cart = () => {
                   style={{
                     marginTop: "10px",
                     textAlign: "left",
-                    marginLeft: "25px",
+                    marginLeft: "10px",
                     fontSize: "13px",
+                    marginBottom:"20px"
                   }}
                 >
                   No additional taxes & fees
@@ -197,6 +221,7 @@ const Cart = () => {
                       marginTop: "-5px",
                       backgroundColor: "#f2b203",
                       border: "none",
+                      marginBottom:"20px",
                       cursor: "pointer",
                       // marginLeft:"-50px"
                     }}
@@ -237,9 +262,6 @@ const Cart = () => {
 };
 
 export default Cart;
-
-
-
 
 // import React from "react";
 // import { Link } from "react-router-dom";
