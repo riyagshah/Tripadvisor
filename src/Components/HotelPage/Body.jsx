@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import axios from "axios";
+import { useSearchParams } from "react-router-dom";
 import {
+  CheckIcon,
   Spacer,
   ListItem,
   UnorderedList,
@@ -11,7 +13,6 @@ import {
   Flex,
   Checkbox,
   Image,
-  Button,
 } from "@chakra-ui/react";
 import { Radio, RadioGroup } from "@chakra-ui/react";
 // import styles from "./Body.module.css";
@@ -28,10 +29,18 @@ const Subheading = styled.h6`
   font-weight: 20px;
   padding: 10px;
 `;
+const Button = styled.button`
+  background-color: RGB(242, 178, 3);
+`;
 
 const Body = () => {
   const dispatch = useDispatch();
-  const hotelsData = useSelector((store) => console.log(store.app.hotels));
+  const [searchParams, setSearchParams] = useSearchParams();
+  const hotelsData = useSelector((store) => store.app.hotels);
+  const urlCategory = searchParams.getAll("category");
+
+
+  const [category, setCategory] = useState(urlCategory || []);
 
   const gethotels = () => {
     dispatch(getHotelsRequest());
@@ -41,17 +50,40 @@ const Body = () => {
       .catch((e) => dispatch(getHotelsFailure(e)));
   };
 
+  const handleChange = (e) => {
+    e.preventDefault()
+    let newCategory = [...category];
+    const option = e.target.value;
+
+    if (category.includes(option)) {
+      newCategory.splice(newCategory.indexOf(option), 1);
+    } else {
+      newCategory.push(option);
+    }
+    setCategory(newCategory);
+  };
+
+
   useEffect(() => {
     if (hotelsData?.length === 0) {
-      dispatch(gethotels());
+      gethotels();
     }
   }, []);
 
+  useEffect(() => {
+    if (category) {
+      let params = {};
+      category && (params.category = category);
+      setSearchParams(params);
+    }
+     // eslint-disable-next-line
+  }, [category, searchParams]);
+
   return (
-    <Flex pl="150px" pr="150px">
+    <Flex pl="150px" pr="150px" bg="RGB(242, 242, 242)">
       {/* filters and sorting */}
       <Stack w="25%" pt="10px" mt="0px">
-        <Box bg="blue.100">
+        <Box bg="#ffffff" pb="10px">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15282225.79979123!2d73.7250245393691!3d20.750301298393563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1587818542745!5m2!1sen!2sin"
             width="100%"
@@ -63,7 +95,7 @@ const Body = () => {
             tabindex="0"
           ></iframe>
         </Box>
-        <Box bg="blue.100">
+        <Box bg="#ffffff" pb="10px">
           <Subheading>Deals</Subheading>
           <UnorderedList>
             <ListItem>
@@ -86,7 +118,7 @@ const Body = () => {
             </ListItem>
           </UnorderedList>
         </Box>
-        <Box bg="blue.100">
+        <Box bg="#ffffff" pb="10px">
           <Subheading>Property types</Subheading>
           <UnorderedList>
             <ListItem>
@@ -115,7 +147,7 @@ const Body = () => {
             </ListItem>
           </UnorderedList>
         </Box>
-        <Box bg="blue.100">
+        <Box bg="#ffffff" pb="10px">
           <Subheading>Popular</Subheading>
           <UnorderedList>
             <ListItem>
@@ -144,7 +176,7 @@ const Body = () => {
             </ListItem>
           </UnorderedList>
         </Box>
-        <Box bg="blue.100">
+        <Box bg="#ffffff" pb="10px">
           <Subheading> Amenities</Subheading>
           <UnorderedList>
             <ListItem>
@@ -173,7 +205,7 @@ const Body = () => {
             </ListItem>
           </UnorderedList>
         </Box>
-        <Box bg="blue.100">
+        <Box bg="#ffffff" pb="10px">
           <Subheading>Distance from</Subheading>
           {/* <UnorderedList>
               <ListItem>
@@ -213,36 +245,48 @@ const Body = () => {
             </Stack>
           </RadioGroup>
         </Box>
-        <Box bg="blue.100">
+        <Box bg="#ffffff" pb="10px">
           <Subheading> Hotel class</Subheading>
           <UnorderedList>
             <ListItem>
-              <Checkbox size="md" colorScheme="green">
+              <Checkbox size="md" colorScheme="green"  
+              value="5star"
+            checked={category.includes("5star")}
+            onChange={handleChange}>
                 {" "}
                 5 stars 23
               </Checkbox>
             </ListItem>
             <ListItem>
-              <Checkbox size="md" colorScheme="green">
+              <Checkbox size="md" colorScheme="green" 
+              value="4star"
+            checked={category.includes("4star")}
+            onChange={handleChange}>
                 {" "}
                 4 stars 65
               </Checkbox>
             </ListItem>
             <ListItem>
-              <Checkbox size="md" colorScheme="green">
+              <Checkbox size="md" colorScheme="green" 
+              value="3star"
+            checked={category.includes("3star")}
+            onChange={handleChange}>
                 {" "}
                 3 stars 335
               </Checkbox>
             </ListItem>
             <ListItem>
-              <Checkbox size="md" colorScheme="green">
+              <Checkbox size="md" colorScheme="green" 
+              value="2star"
+            checked={category.includes("2star")}
+            onChange={handleChange}>
                 {" "}
                 2 stars 184
               </Checkbox>
             </ListItem>
           </UnorderedList>
         </Box>
-        <Box bg="blue.100">
+        <Box bg="#ffffff" pb="10px">
           <Subheading>Style</Subheading>
           <UnorderedList>
             <ListItem>
@@ -271,7 +315,7 @@ const Body = () => {
             </ListItem>
           </UnorderedList>
         </Box>
-        <Box bg="blue.100">
+        <Box bg="#ffffff" pb="10px">
           <Subheading>Brands</Subheading>
           <UnorderedList>
             <ListItem>
@@ -303,22 +347,49 @@ const Body = () => {
       </Stack>
       {/* hotels list */}
       <Stack w="75%" mt="0px" p="12px">
-        <Box bg="pink.100" h="280px" w="100">
-          <Flex>
-            <Image
-              mh="280px"
-              boxSize="280px"
-              src="https://bit.ly/dan-abramov"
-              alt="hotels"
-            />
-            <Box p="50px">
-              <Subheading>heading</Subheading>
-              <Spacer />
-              <Subheading m="50%">Price</Subheading>
-              <Button>View Deal</Button>
-            </Box>
-          </Flex>
-        </Box>
+        {hotelsData.isLoading && <div>Loading...</div>}
+        {hotelsData.isError && <div>error...</div>}
+        {hotelsData &&
+          hotelsData.map((hotel) => {
+            return (
+              <>
+                <Box h="280px" w="100" bg="#ffffff">
+                  <Flex>
+                    <Image
+                      mh="280px"
+                      boxSize="280px"
+                      src={`${hotel.img_}`}
+                      alt="hotels"
+                    />
+                    <Box p="50px">
+                      <Subheading>{hotel.title}</Subheading>
+                      <Spacer />
+                      <Subheading>{hotel.Price}</Subheading>
+                      <Button
+                        style={{
+                          width: "160px",
+                          height: "40px",
+                          borderRadius: "20px",
+                        }}
+                      >
+                        View Deal
+                      </Button>
+                      {hotel.isFreeCancellation && (
+                        <div style={{ padding: "5px" }}>
+                          ✔️Free cancellation{" "}
+                        </div>
+                      )}
+                      {hotel.isReserverNowPatAtStay && (
+                        <div style={{ padding: "5px" }}>
+                          ✔️Reserve now, pay at stay
+                        </div>
+                      )}
+                    </Box>
+                  </Flex>
+                </Box>
+              </>
+            );
+          })}
       </Stack>
     </Flex>
   );

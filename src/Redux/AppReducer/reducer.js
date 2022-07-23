@@ -19,7 +19,7 @@ const hotelsReducer = (state= initialState, action) => {
         case types.FETCH_HOTELS_DATA_SUCCESS: {
           return {
             ...state,
-            countries: payload,
+            hotels: payload,
             isLoading: false,
             isError: false
           }

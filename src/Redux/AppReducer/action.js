@@ -1,19 +1,21 @@
 import * as types from './actionTypes'
 
 
-export const getHotelsRequest = () => {
+const getHotelsRequest = () => {
     return {
         type: types.FETCH_HOTELS_DATA_REQUEST
     }
 }
-export const getHotelsSuccess = (payload) => {
+const getHotelsSuccess = (payload) => {
     return {
         type: types.FETCH_HOTELS_DATA_SUCCESS,
-        hotels: payload,
+        payload,
     }
 }
-export const getHotelsFailure = () => {
+const getHotelsFailure = () => {
     return {
         type: types.FETCH_HOTELS_DATA_FAILURE
     }
 }
+
+export {getHotelsRequest,getHotelsSuccess,getHotelsFailure}
