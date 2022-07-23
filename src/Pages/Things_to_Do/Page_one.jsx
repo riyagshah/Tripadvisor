@@ -2,9 +2,14 @@ import React from 'react'
 import Review from './Review'
 import styles from './Page_one.module.css'
 import TopAttraction from './Top_Attraction'
+import { useNavigate } from 'react-router-dom'
 
 
 const Page_one = () => {
+    const navigate=useNavigate()
+    const navigatetodis=()=>{
+navigate("/Description")
+    }
     const data = [{ "id": 1, "imgUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/75/46/5e/caption.jpg?w=300&h=300&s=1","category":'E-Bike Tours',"price":"from ₹2,620.44 per adult","title":"BLive Electric Bike Tours – Discovery of Divar Island" },
         { "id": 2, "imgUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/79/66/7f/caption.jpg?w=300&h=300&s=1","category":'E-Bike Tours',"price":"from ₹2,440.29 per adult","title":"BLive Electric Bike Tours – Countryside Escape to Varca" },
         { "id": 3, "imgUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/75/46/4a/caption.jpg?w=300&h=300&s=1","category":'E-Bike Tours',"price":"from ₹2,440.29 per adult","title":"BLive Electric Bike Tours – Captivating Cavelossim" },
@@ -103,7 +108,7 @@ const Page_one = () => {
                   <br />
                   <div className={styles.bike}>
                       {data.map((item) => (
-                          <div key={item.id} >
+                          <div key={item.id}  onClick={navigatetodis}>
                               <img height="200px" width="250px" src={item.imgUrl} alt="" />
                               <p style={{ fontSize: "14px" }}>{item.title}</p>
                               <img width="100%" src={require('./images/dots.png')} alt="" />

@@ -3,6 +3,7 @@ import React from 'react'
 
 import "./signup.css"
 import { useReducer, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 // import { useNavigate } from 'react-router-dom';
 // // import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 // import { Link as RouterLink, useNavigate } from "react-router-dom";
@@ -62,7 +63,7 @@ const Signupnew = () => {
     const [email,setEmail]=useState("");
     const [flag,setFlag]=useState(false);
     const [login,setLogin]=useState(false);
-    // const Navigate=useNavigate()
+    const navigate=useNavigate()
     
     
     const handleSubmit=(e)=>{
@@ -79,6 +80,7 @@ const Signupnew = () => {
           console.log("Saved in Local Storage");
           setLogin(!login);
           alert("Successfull");
+          navigate("/login")
           
          
         // }
@@ -101,7 +103,7 @@ const Signupnew = () => {
           <div className='signupcheck'><div>Yes, inform me on deals & new features. I can opt out at any time.</div></div>
           
           <div className='blackdiv' onClick={handleSubmit}><p>Join</p></div>
-          <div className='maildiv'>-------------Already a Member ?---------------</div>
+          <div className='maildiv' >-------------Already a Member ?---------------</div>
           <div  className='mailjoin' style={{display:"flex"}}><div className="mailJoin">Login</div> <div> using your Tripadvisor account</div></div>
           <div className='mailtext'>By proceeding, you agree to our Terms of Use and confirm you have read our Privacy and Cookie Statement.</div>
           <div className='mailtext'>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</div>

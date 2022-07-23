@@ -2,10 +2,8 @@ import React from 'react'
 import "./signin.css"
 import { useState,useReducer } from 'react';
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import {Link as RouterLink, useLocation, useNavigate} from 'react-router-dom';
-import { login } from '../Redux/AuthReducer/action';
-import { LOGIN_SUCCESS } from '../Redux/AuthReducer/actionType';
+import { useNavigate } from 'react-router-dom';
+
 const reducer=(state=initState,{type,payload})=>{
     switch(type){
      
@@ -35,7 +33,7 @@ const reducer=(state=initState,{type,payload})=>{
     
 
 const Signinnew = () => {
-
+const navigate=useNavigate()
     
     // const dispatch=useDispatch();
     // const [state,SetDispatch]=useReducer(reducer,initState);
@@ -102,7 +100,7 @@ function handleLogin(e) {
 
     localStorage.setItem("token",true);
     alert("Login Sucessfull")
-    // Navigate("/cart");
+    navigate("/");
   }
 }
 useEffect(()=>{

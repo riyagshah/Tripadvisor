@@ -9,10 +9,13 @@ import {list,list3} from './data'
 import {list2}from './data1'
 import Footer from '../Footer/Footer.jsx';
 import './Slider.css'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Homepage = () => {
-// const navigate =useNavigate()
+const navigate =useNavigate()
+const navigatetosign=()=>{
+navigate("/signup")
+}
 const [InputText, setInputText] = useState("");
 const handlechange=(e)=>{
 setInputText(e.target.value)
@@ -90,8 +93,9 @@ if(over)
                     </a>
                 </li>
                 <li class="top-nav-link" className="sign ">
-                    <button href="" class="text-white ">
+                    <button href="" class="text-white " onClick={navigatetosign}>
                         Sign In
+                    
                     </button>
                 </li>
             </ul>
@@ -112,10 +116,12 @@ if(over)
                     </a>
                 </li>
                 <li class="bottom-nav-link">
-                    <a href="/">
-                        <span className='up'>Things to Do</span>
+                   <Link to="/thingstodo">
+                   <span className='up'>Things to Do</span>
                         <span> <FontAwesomeIcon icon={faList} /></span>
-                    </a>
+                   </Link>
+                     
+                    
                 </li>
                 <li class="bottom-nav-link">
                     <a href="/">

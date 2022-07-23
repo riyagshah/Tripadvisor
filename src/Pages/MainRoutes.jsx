@@ -1,10 +1,13 @@
 import React from 'react';
 import {Routes,Route} from "react-router-dom"
 import Homepage from '../Components/Homepage/Homepage';
+import Signinnew from '../Components/signin/Signinnew';
+import Signupnew from '../Components/signin/Signupnew';
 import Cart from './Cart/Cart';
 import Checkout from './Checkout.jsx/Checkout';
 import Payment from './Payment/Payment';
 import PaymentSuccess from "./Payment/PaymentSuccess";
+import Page_one from './Things_to_Do/Page_one';
 import Description from './Tour_Description/Description';
 
 
@@ -18,6 +21,9 @@ const MainRoutes = () => {
         <Route path="/Checkout" element={<Checkout />}></Route>
         <Route path="/Payment" element={<Payment />}></Route>
         <Route path="/PaymentSuccess" element={<PaymentSuccess />}></Route>
+        <Route path="/login" element={<Signinnew />}></Route>
+        <Route path="/signup" element={<Signupnew />}></Route>
+        <Route path="/thingstodo" element={<Page_one/>}></Route>
         </Routes>
     </div>
   );
