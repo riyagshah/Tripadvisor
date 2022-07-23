@@ -1,17 +1,13 @@
 import React from "react";
-import style from "./Checkout.module.css";
+import style from "../Payment/Payment.module.css";
 import { Link } from "react-router-dom";
-import CheckoutNav from ".././Tour_Description/Images/CheckoutNav.png";
-
-const Checkout = () => {
-  let checkoutData = JSON.parse(localStorage.getItem("Data"));
-  console.log(checkoutData);
+import PaymentNav from ".././Tour_Description/Images/PaymentNav.png";
+const Payment = () => {
+  let paymentData = JSON.parse(localStorage.getItem("Data"));
+  console.log(paymentData);
   return (
     <div>
-      <div>
-        {" "}
-        <img src={CheckoutNav} alt="" />
-      </div>
+      <img src={PaymentNav} alt="" />
       <p
         style={{
           textAlign: "left",
@@ -22,41 +18,43 @@ const Checkout = () => {
           marginTop: "10px",
         }}
       >
-        {"<"} Back to Cart
+        {" "}
+        Back to Cart {">"} Traveler Details
       </p>
-      <h1
-        style={{
-          textAlign: "left",
-          margin: "20px",
-          marginLeft: "150px",
-          marginTop: "50px",
-        }}
-      >
-        Secure Checkout
-      </h1>
-      <div
-        style={{
-          height: "50px",
-          width: "80%",
-          backgroundColor: "#eafaf4",
-          margin: "auto",
-          borderRadius: "10px",
-        }}
-      >
-        <p style={{ textAlign: "left", margin: "20px", padding: "12px" }}>
-          Checkout securely - it takes only a few minutes.{" "}
-        </p>
-      </div>
+      {/* <h1 style={{ textAlign: "left", margin: "20px" ,marginLeft:"150px",marginTop:"50px"}}>Payment Details</h1> */}
+
       <div className={style.main}>
         <div className={style.leftdiv}>
-          <p style={{ fontWeight: "700", fontSize: "25px" }}>Contact Details</p>
-          <div className="emaildiv" style={{ display: "flex", gap: "90px" }}>
+          <p style={{ fontWeight: "700", fontSize: "25px" }}>Payment Details</p>
+          <div>
+            <div style={{ display: "flex" }}>
+              <input type="radio" /> <span>Credit Card</span>
+              <div style={{ display: "flex" }}>
+                <img
+                  style={{ height: "20px", width: "30px", marginLeft: "10px" }}
+                  src="https://static.tacdn.com/img2/solutions/shoppingcart/cc_AMEX_2019_icon.svg"
+                  alt=""
+                />
+                <img
+                  style={{ height: "20px", width: "30px", marginLeft: "10px" }}
+                  src="https://static.tacdn.com/img2/solutions/shoppingcart/cc_Visa_icon.svg"
+                  alt=""
+                />
+                <img
+                  style={{ height: "20px", width: "30px", marginLeft: "10px" }}
+                  src="https://static.tacdn.com/img2/solutions/shoppingcart/cc_Mastercard_icon.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div className="emaildiv" style={{ gap: "90px" }}>
             <div>
-              <p style={{ fontWeight: "700" }}>Email *</p>
+              <p style={{ fontWeight: "700" }}>Cardholder Name *</p>
               <input
                 style={{
                   height: "40px",
-                  width: "200px",
+                  width: "300px",
                   borderRadius: "3px",
                   borderColor: "#e0e0e0",
                 }}
@@ -64,7 +62,105 @@ const Checkout = () => {
               />
             </div>
             <div>
-              <p style={{ fontWeight: "700" }}>Phone Number *</p>
+              <p style={{ fontWeight: "700" }}>Credit/debit card number *</p>
+              <input
+                style={{
+                  height: "40px",
+                  width: "300px",
+                  borderRadius: "3px",
+                  borderColor: "#e0e0e0",
+                }}
+                type="text"
+              />
+            </div>
+          </div>
+          <div style={{ fontWeight: "700", display: "flex" }}>
+            <p style={{ fontWeight: "700", display: "flex" }}>
+              Expiration date *
+            </p>
+            <p
+              style={{ fontWeight: "700", display: "flex", marginLeft: "80px" }}
+            >
+              CVC Code *
+            </p>
+          </div>
+          <select
+            style={{
+              height: "40px",
+              width: "80px",
+              marginLeft: "5px",
+              borderColor: "#e0e0e0",
+            }}
+            name="Month"
+            id=""
+          >
+            <option value="Month">Month</option>
+            <option value="Jan">Jan</option>
+            <option value="Feb">Feb</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="Aug">Aug</option>
+            <option value="Sep">Sep</option>
+            <option value="Oct">Oct</option>
+            <option value="Nov">Nov</option>
+            <option value="Dec">Dec</option>
+          </select>
+          <select
+            style={{
+              height: "40px",
+              width: "80px",
+              marginLeft: "20px",
+              borderColor: "#e0e0e0",
+            }}
+            name="Year"
+            id=""
+          >
+            <option value="Year">Year</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+          </select>
+          <input
+            type="Number"
+            style={{
+              height: "40px",
+              width: "80px",
+              marginLeft: "20px",
+              maxlength: "3",
+              borderColor: "#e0e0e0",
+            }}
+          />
+          <div style={{ display: "flex" }}></div>
+          <p style={{ fontWeight: "700", fontSize: "25px" }}>Billing Address</p>
+          <div
+            className="emaildiv"
+            style={{ display: "flex", gap: "90px", marginTop: "-15px" }}
+          >
+            <div>
+              <p style={{ fontWeight: "700" }}> Country *</p>
+              <select
+                style={{
+                  height: "40px",
+                  width: "180px",
+                  marginLeft: "0px",
+                  borderColor: "#e0e0e0",
+                }}
+                name="Year"
+                id=""
+              >
+                <option value="Country">Country</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="China">China</option>
+              </select>
+            </div>
+            <div>
+              <p style={{ fontWeight: "700" }}>Postal/Zip Code*</p>
               <input
                 style={{
                   height: "40px",
@@ -77,50 +173,9 @@ const Checkout = () => {
             </div>
           </div>
           <input style={{ marginTop: "20px" }} type="checkbox" />{" "}
-          <span>
-            Receive text message updates about your booking. Message rates may
-            apply.
-          </span>
-          <p style={{ fontWeight: "700", fontSize: "25px" }}>
-            Traveler Details
-          </p>
-          <p style={{ fontWeight: "700" }}>Lead Traveler</p>
-          <div
-            className="emaildiv"
-            style={{ display: "flex", gap: "90px", marginTop: "-15px" }}
-          >
-            <div>
-              <p style={{ fontWeight: "700" }}> First Name *</p>
-              <input
-                style={{
-                  height: "40px",
-                  width: "200px",
-                  borderRadius: "3px",
-                  borderColor: "#e0e0e0",
-                }}
-                type="text"
-              />
-            </div>
-            <div>
-              <p style={{ fontWeight: "700" }}>Last Name*</p>
-              <input
-                style={{
-                  height: "40px",
-                  width: "200px",
-                  borderRadius: "3px",
-                  borderColor: "#e0e0e0",
-                }}
-                type="text"
-              />
-            </div>
-          </div>
-          <h4>Promo Code</h4>
-          <hr style={{ opacity: "0.5", marginTop: "-5px" }} />
-          <a style={{ color: "#004f32" }} href="">
-            <b> Enter Promo Code </b>
-          </a>
+          <span>Add this card to your account for future use</span>
           <br />
-          <Link to="/Payment">
+          <Link to="/PaymentSuccess">
             <button
               style={{
                 borderRadius: "18px",
@@ -135,13 +190,13 @@ const Checkout = () => {
                 // marginLeft:"-50px"
               }}
             >
-              <b>Next</b>
+              <b>Submit</b>
             </button>
           </Link>
         </div>
 
         <div className={style.rightdiv} style={{ width: "30%" }}>
-          {checkoutData.map((item) => {
+          {paymentData.map((item) => {
             return (
               <div
                 style={{
@@ -434,7 +489,7 @@ const Checkout = () => {
                   <p
                     style={{
                       marginTop: "-10px",
-                      marginLeft: "px",
+                      marginLeft: "0px",
                       textAlign: "left",
                     }}
                   >
@@ -454,4 +509,4 @@ const Checkout = () => {
   );
 };
 
-export default Checkout;
+export default Payment;
