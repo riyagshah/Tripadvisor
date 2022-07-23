@@ -1,41 +1,34 @@
 import React from "react";
 import style from "./main.module.css";
-import img1 from "../Images/img1.svg";
-import img2 from "../Images/img2.svg";
-import img3 from "../Images/img3.svg";
-import img4 from "../Images/img4.svg";
-import img5 from "../Images/img5.svg";
-import img6 from "../Images/img6.svg";
-import img7 from "../Images/img7.svg";
-import bnner1 from "../Images/bnner1.jpg";
-import bnner2 from "../Images/bnner2.jpg";
-import bottom from "../Images/bottom.jpg";
-import data1 from "./data1.json"
-// import Carousel from "./slider";
-// import { ChakraProvider } from "@chakra-ui/react";
-// import FAQs from "./FAQs";
-// import axios from "axios";
-import { Link } from "react-router-dom"
+import img1 from "./Images/img1.svg";
+import img2 from "./Images/img2.svg";
+import img3 from "./Images/img3.svg";
+import img4 from "./Images/img4.svg";
+import img5 from "./Images/img5.svg";
+import img6 from "./Images/img6.svg";
+import img7 from "./Images/img7.svg";
+import bnner1 from "./Images/bnner1.jpg";
+import bnner2 from "./Images/bnner2.jpg";
+import bottom from "./Images/bottom.jpg";
+import data1 from "./data1.json";
 
-const Main = () => {
+import { Link } from "react-router-dom";
 
-   const Data = data1.data1
-   console.log(Data)
+const Description = () => {
+  const Data = data1.data1;
+  console.log(Data);
 
-const AddToCart =()=>{
-  localStorage.setItem("Data",JSON.stringify(Data)
-
-    )
-  
-   
-}
+  const AddToCart = () => {
+    localStorage.setItem("Data", JSON.stringify(Data));
+  };
 
   return (
     <>
       <div className={style.main}>
         <p style={{ textAlign: "left", fontSize: "14px" }}>
-          Asia {">"} India {">"} Goa {">"} South Goa District {">"} Salcette {">"} Varca {">"} Things to
-          Do in Varca {">"} Varca Tours {">"} Tours and Tickets
+          Asia {">"} India {">"} Goa {">"} South Goa District {">"} Salcette{" "}
+          {">"} Varca {">"} Things to Do in Varca {">"} Varca Tours {">"} Tours
+          and Tickets
         </p>
         <div className={style.topdiv}>
           <div className={style.imgdiv} style={{ marginTop: "30px" }}>
@@ -103,43 +96,39 @@ const AddToCart =()=>{
                 </h1>
               </div>
               <div className={style.button}>
-
-
                 <Link to="/Cart">
-                <button 
-                onClick={AddToCart}
-                  style={{
-                    borderRadius: "18px",
-                    height: "40px",
-                    width: "100px",
-                    marginTop: "-5px",
-                    backgroundColor: "#f2b203",
-                    border: "none",
-                    cursor: "pointer",
-                  }}
-                >
-                  <b >Add to Cart</b>
-                </button>
+                  <button
+                    onClick={AddToCart}
+                    style={{
+                      borderRadius: "18px",
+                      height: "40px",
+                      width: "100px",
+                      marginTop: "-5px",
+                      backgroundColor: "#f2b203",
+                      border: "none",
+                      cursor: "pointer",
+                    }}
+                  >
+                    <b>Add to Cart</b>
+                  </button>
                 </Link>
-
 
                 <Link to="/Checkout">
-                <button
-                  style={{
-                    borderRadius: "18px",
-                    height: "40px",
-                    width: "100px",
-                    marginLeft: "30px",
-                    marginTop: "-5px",
-                    backgroundColor: "#f2b203",
-                    border: "none",
-                    cursor: "pointer",
-                  }}
-                >
-                  <b>Reserve</b>
-                </button>
+                  <button
+                    style={{
+                      borderRadius: "18px",
+                      height: "40px",
+                      width: "100px",
+                      marginLeft: "30px",
+                      marginTop: "-5px",
+                      backgroundColor: "#f2b203",
+                      border: "none",
+                      cursor: "pointer",
+                    }}
+                  >
+                    <b>Reserve</b>
+                  </button>
                 </Link>
-
               </div>
             </div>
             <p style={{ marginTop: "-20px", marginLeft: "3px" }}>per adult</p>
@@ -331,15 +320,12 @@ const AddToCart =()=>{
             <p style={{ fontSize: "18px", marginTop: "10px" }}>View details</p>
           </button>
 
-          
           <br />
           <br />
           <br />
           <br />
 
           <img src={bnner2} alt="" />
-
-          
 
           <br />
           <br />
@@ -388,13 +374,20 @@ const AddToCart =()=>{
         </div>
         <br />
         <br />
-        <img style={{width:"95%",marginLeft:"-20px"}}src={bnner1} alt="" />
+        <img
+          style={{ width: "95%", marginLeft: "-20px" }}
+          src={bnner1}
+          alt=""
+        />
 
-        <img style={{width:"95%",marginTop:"60px",marginLeft:"-40px"}}src={bottom} alt="" />
-
+        <img
+          style={{ width: "95%", marginTop: "60px", marginLeft: "-40px" }}
+          src={bottom}
+          alt=""
+        />
       </div>
     </>
   );
 };
 
-export default Main;
+export default Description;
