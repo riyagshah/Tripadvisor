@@ -3,7 +3,7 @@ import { InputGroup, Input } from "@chakra-ui/react";
 
 const InputDate = () => {
   return (
-    <div>
+    <div style={{position:"sticky"}} >
       <InputGroup
         style={{
           display: "flex",
@@ -28,7 +28,7 @@ const InputDate = () => {
           <img
             alt="calender"
             src={
-              "https://cdn-icons.flaticon.com/png/512/591/premium/591638.png?token=exp=1658414523~hmac=28675bcaebe01bdff3b89b23ded001d8"
+              "https://cdn-icons-png.flaticon.com/128/747/747310.png"
             }
             style={{
               padding: "10px",
@@ -64,7 +64,7 @@ const InputDate = () => {
           <img
             alt="calender"
             src={
-              "https://cdn-icons.flaticon.com/png/512/591/premium/591638.png?token=exp=1658414523~hmac=28675bcaebe01bdff3b89b23ded001d8"
+              "https://cdn-icons-png.flaticon.com/128/747/747310.png"
             }
             style={{
               padding: "10px",

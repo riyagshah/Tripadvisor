@@ -2,7 +2,7 @@ import React from 'react'
 import styled from "styled-components"
 import styles from './TopSection.module.css'
 import InputDate from './InputDate'
-import Background from '../utils/pexels-photo-1174732.jpeg'
+import Background from '../../utils/pexels-photo-531035.jpeg'
 
 const Wrapper = styled.div`
   height: 251px;
@@ -21,7 +21,7 @@ const Subheading = styled.h6`
 
 const TopSection = () => {
     return (
-      <Wrapper style={{ backgroundImage: `url(${Background})`,backgroundRepeat:'no-repeat',maxWidth: "100%",maxHeight: "100%",backgroundSize: "cover", strech:'no-strech'}}>
+      <Wrapper style={{ backgroundImage: `url(${Background})`,backgroundRepeat:'no-repeat',maxWidth: "100%",maxHeight: "100%",backgroundSize: "cover", strech:'no-strech', shadow:'10%'}}>
         <div className= {styles.centerBox}>
           <Heading style={{ textAlign: "center" ,color: '#ffffff'}}>
             Goa Hotels and Places to Stay
