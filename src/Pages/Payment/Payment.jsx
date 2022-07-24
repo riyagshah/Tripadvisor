@@ -19,7 +19,7 @@ const Payment = () => {
         }}
       >
         <img
-          style={{ height: "160px", width: "140%" }}
+          style={{ height: "160px", width: "140%",marginLeft:"-50px" }}
           src={PaymentNav}
           alt=""
         />{" "}

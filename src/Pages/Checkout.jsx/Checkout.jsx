@@ -11,7 +11,7 @@ const Checkout = () => {
       <div>
         {" "}
         <img
-          style={{ height: "160px", width: "140%" }}
+          style={{height: "160px", width: "80%",marginLeft:"140px" }}
           src={CheckoutNav}
           alt=""
         />
