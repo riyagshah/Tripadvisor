@@ -173,8 +173,11 @@ if(over)
         </div>
     {/* slider */}
     <div className="fourth_box">
+ 
+    <p className='leftrec'>   Top experiences on Tripadvisor</p>
+    {/* <p className='left'>More things to do in Hyderabad</p> */}
 
-    <p className='left'>More things to do in Hyderabad</p>
+    <h2 className='left1'> </h2>
    <div className="boxbest">
    <Carousel cols={4} rows={1} gap={5} loop
     >
@@ -243,7 +246,7 @@ if(over)
 </div>
 {/* slide end */}
 <div className="fourth_box">
-    <h2 className='left1'>Top experiences in Tripadvisor </h2>
+    <h2 className='left1'>Based on your recent activity </h2>
    
    <div className="boxbest">
    <Carousel cols={4} rows={1} gap={5} loop
@@ -301,7 +304,7 @@ if(over)
     <img  className="pinkimg" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/f7/1d/4d/caption.jpg?w=1000&h=-1&s=1" alt="" />
 </div>
 <div className="fourth_box">
-    <h2 className='leftrech1'>Top destinations for beach lovers </h2>
+    
     <p className='leftrec'>Recommended based on your activity</p>
    <div className="boxbest">
    <Carousel cols={4} rows={1} gap={5} loop

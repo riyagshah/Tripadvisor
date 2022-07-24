@@ -3,7 +3,8 @@ import Review from './Review'
 import styles from './Page_one.module.css'
 import TopAttraction from './Top_Attraction'
 import { useNavigate } from 'react-router-dom'
-
+import SubPageHeader from '../../Components/SubPageHeader/SubPageHeader'
+import SubPagesFooter from '../../Components/SubPagesFooter/SubPageFooter'
 
 const Page_one = () => {
     const navigate=useNavigate()
@@ -43,7 +44,8 @@ navigate("/Description")
 
   return (
       <>
-          <div style={{border:"1px solid black",width:'1050px',margin:"auto"}}>
+      <SubPageHeader/>
+          <div style={{width:'1050px',margin:"auto"}}>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
               <p
 					style={{
@@ -173,7 +175,7 @@ navigate("/Description")
               </div>
           </div>
         
-          
+          <SubPagesFooter/>
           
     </>
   )

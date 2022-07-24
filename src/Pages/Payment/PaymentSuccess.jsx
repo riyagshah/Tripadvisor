@@ -33,7 +33,7 @@ const PaymentSuccess = () => {
               backgroundColor: "black",
               border: "none",
               cursor: "pointer",
-              marginLeft:"300px"
+              marginLeft:"-200px"
             }}
           >
             <b>Done</b>
