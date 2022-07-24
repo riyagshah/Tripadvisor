@@ -4,6 +4,8 @@ import React from 'react'
 import "./signup.css"
 import { useReducer, useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import SubPageFooter from '../SubPagesFooter/SubPageFooter';
+import SubPageHeader from '../SubPageHeader/SubPageHeader';
 // import { useNavigate } from 'react-router-dom';
 // // import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 // import { Link as RouterLink, useNavigate } from "react-router-dom";
@@ -87,7 +89,9 @@ const Signupnew = () => {
     }
     
   return (
-    <div className='signupmain'>
+    <>
+
+      <div className='signupmain'>
        <img src='https://static.tacdn.com/img2/brand_refresh/Tripadvisor_Logo_dark-bg_circle-green_horizontal-lockup_registered_RGB.svg'></img>
        <div className='signupheading'>Join to unlock the best <br></br>of Tripadvisor</div>
        <div className='signupinputdiv'>
@@ -111,6 +115,9 @@ const Signupnew = () => {
         
           </div>
     </div>
+
+    </>
+  
   )
 }
 

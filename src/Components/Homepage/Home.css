@@ -481,7 +481,7 @@ a, a:link, a:visited {
     background-color: #faf1ed;
   }
   #top-nav-container{
-    position: sticky !important;
+    position:sticky !important;
     top:0px;
   }
   #navbar{

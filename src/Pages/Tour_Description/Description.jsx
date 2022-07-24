@@ -13,6 +13,8 @@ import bottom from "./Images/bottom.jpg";
 import data1 from "./data1.json";
 
 import { Link } from "react-router-dom";
+import SubPageHeader from "../../Components/SubPageHeader/SubPageHeader";
+import SubPageFooter from "../../Components/SubPagesFooter/SubPageFooter";
 
 const Description = () => {
   const Data = data1.data1;
@@ -24,6 +26,7 @@ const Description = () => {
 
   return (
     <>
+    <SubPageHeader/>
       <div className={style.main} style={{ paddingTop: "30px" }}>
         <p style={{ textAlign: "left", fontSize: "14px" }}>
           Asia {">"} India {">"} Goa {">"} South Goa District {">"} Salcette{" "}
@@ -527,6 +530,7 @@ const Description = () => {
           alt=""
         />
       </div>
+      <SubPageFooter/>
     </>
   );
 };

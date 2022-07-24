@@ -3,6 +3,8 @@ import "./signin.css"
 import { useState,useReducer } from 'react';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import SubPageHeader from '../SubPageHeader/SubPageHeader';
+import SubPageFooter from '../SubPagesFooter/SubPageFooter';
 
 const reducer=(state=initState,{type,payload})=>{
     switch(type){
@@ -111,7 +113,9 @@ useEffect(()=>{
 })
 
   return (
-    <div className='signinmain'>
+    <>
+    <SubPageHeader/>
+       <div className='signinmain'>
        <img src='https://static.tacdn.com/img2/brand_refresh/Tripadvisor_Logo_dark-bg_circle-green_horizontal-lockup_registered_RGB.svg'></img>
        <div className='signupheading'>Welcome Back</div>
        <div className='signininputdiv'>
@@ -132,6 +136,9 @@ useEffect(()=>{
             </div>
            
     </div>
+    <SubPageFooter/>
+    </>
+ 
   )
 }
 

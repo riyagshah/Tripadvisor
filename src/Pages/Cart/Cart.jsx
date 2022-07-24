@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SubPageHeader from "../../Components/SubPageHeader/SubPageHeader";
+import SubPageFooter from "../../Components/SubPagesFooter/SubPageFooter";
 import style from "../Tour_Description/main.module.css";
 
 const Cart = () => {
@@ -8,6 +10,7 @@ const Cart = () => {
 
   return (
     <div>
+      <SubPageHeader/>
       <div>
         {" "}
         <p
@@ -257,6 +260,7 @@ const Cart = () => {
           })}
         </div>
       </div>
+      <SubPageFooter/>
     </div>
   );
 };

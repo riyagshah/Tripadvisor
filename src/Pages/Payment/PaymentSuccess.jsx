@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SubPageHeader from "../../Components/SubPageHeader/SubPageHeader";
+import SubPageFooter from "../../Components/SubPagesFooter/SubPageFooter";
 
 const PaymentSuccess = () => {
   return (
     <div>
+      <SubPageHeader/>
       <div
         style={{
           height: "600px",
@@ -40,6 +43,7 @@ const PaymentSuccess = () => {
           </button>
         </Link>
       </div>
+      <SubPageFooter/>
     </div>
   );
 };

@@ -1,10 +1,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Footer from "../Components/Footer/Footer";
 import Homepage from "../Components/Homepage/Homepage";
 import Signinnew from "../Components/signin/Signinnew";
 import Signupnew from "../Components/signin/Signupnew";
-import SubPageHeader from "../Components/SubPageHeader/SubPageHeader";
+
 import Cart from "./Cart/Cart";
 import Checkout from "./Checkout.jsx/Checkout";
 import Payment from "./Payment/Payment";
