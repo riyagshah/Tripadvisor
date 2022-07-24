@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Clone of Tripadvisor.com
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This was our project for Unit-5 Construct week at Masai Shcool.
+Our mian objective was to complete all main functionality of this e-commerce website by using such as sing up to till to the buying of a product React,JavaScript, HTML and CSS.
+We have completed this project in 5 days.
 
-## Available Scripts
+- [Click here](https://tripadvisor-frail-power-8560.netlify.app/) to see preview of our project.
 
-In the project directory, you can run:
+Tripadvisor.com is leading travel sugessions website for all type of trips and travels around the various cities all over the world.
 
-### `npm start`
+## Credits
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Images : [www.tripadvisor.in](https://www.www.tripadvisor.in/)
+- Content : [www.tripadvisor.in](https://www.www.tripadvisor.in/)
+- Icons : [Font Awesome](https://fontawesome.com/)
+- References : [MDN Docs](https://developer.mozilla.org/en-US/) | [W3School](https://www.w3schools.com/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+- HTML 5
+- CSS 3
+- Javascript
+- React
+- Chakra UI
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+- Login and Sign in authentication
+- Product slider for different categories
+- Product page for different categories
+- Detailed product preview page
+- Add to cart option for buying travel services.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Presentation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[Click here](https://drive.google.com/file/d/1MHu7EQyqGK8W53TVlgfw17IA4K2YGRur/view?usp=sharing) to watch our project presentation.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Screenshots
 
-### `npm run eject`
+//To be Added
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Challenges
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. As every journey has some challenges and so was ours. In our team, all of the members were not familiar with each other so it was difficult for all of us to communicate and collaborate, there were some moments when members were not able to communicate with each other and had a conflict and it was hard for everyone to handle these conflicts.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Another problem was to merge all of the files in a proper sequence which was again a difficult task for us because while merging and connecting all the pages some of the pages had the same name, and while running the site it was redirecting to some other pages so it was difficult to find the location and to rename the file.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Team
 
-## Learn More
+- Riya Shah
+- Shubham Pawar
+- Rohan Tekade	
+- Rohan Tiwari	
+- Hrutugandha Nishigandh	
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Authors
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [@Riya Shah](https://github.com/riyagshah)
+- [@Shubham Pawar](https://github.com/Shubh-Pawar007)
+- [@Rohan Tekade](https://github.com/RohanT79)
+- [@Rohan Tiwari](https://github.com/ROHAN3110)
+- [@Hrutugandha Nishigandh](https://github.com/hrutugandha)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
