@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "./Carousel";
 import styled from "styled-components";
 import { Center } from "@chakra-ui/react";
-
+import styles from './Page_one.module.css'
 const TopAttraction = () => {
 	const TAdata = [
 		{
@@ -192,19 +192,21 @@ const TopAttraction = () => {
 							<h5>{e.name}</h5>
 
 							<div style={{ display: "flex", alignItems: "center" }}>
-								<img
+							<div className={styles.greenmini}>
+							<img
 									height="20px"
 									width="50px"
 									src={require("./images/miniDots.png")}
 									alt=""
 								/>
 
-								<p style={{ fontSize: "10px" }}>
+								<p  className={styles.pch}style={{ fontSize: "10px" }}>
 									{Math.floor(Math.random() * 100) + 50}
 								</p>
 							</div>
+							</div>
 
-							<p style={{ fontSize: "12px" }}>{e.category}</p>
+							<p style={{ fontSize: "12px", marginTop :"-25px"}}>{e.category}</p>
 						</div>
 					</div>
 				))}

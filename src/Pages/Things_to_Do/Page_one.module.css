@@ -20,3 +20,13 @@ line-height: 24px;
     margin-top:70px;
     margin-right:'120px'
 }
+.greenmini{
+    display: flex;
+    flex-direction: row;
+    width: 65px;
+    justify-content: space-evenly;
+
+    align-items:center;
+}
+.pch{
+    margin: -20px 6px 3px 0px}
