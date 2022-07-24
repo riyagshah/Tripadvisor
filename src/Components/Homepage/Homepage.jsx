@@ -10,7 +10,7 @@ import {list2}from './data1'
 import Footer from '../Footer/Footer.jsx';
 import './Slider.css'
 import { Link, useNavigate } from 'react-router-dom';
-
+import './Home.css'
 const Homepage = () => {
 const navigate =useNavigate()
 const navigatetosign=()=>{
