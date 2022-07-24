@@ -24,7 +24,7 @@ const Description = () => {
 
   return (
     <>
-      <div className={style.main}>
+      <div className={style.main} style={{ paddingTop: "30px" }}>
         <p style={{ textAlign: "left", fontSize: "14px" }}>
           Asia {">"} India {">"} Goa {">"} South Goa District {">"} Salcette{" "}
           {">"} Varca {">"} Things to Do in Varca {">"} Varca Tours {">"} Tours
@@ -44,9 +44,21 @@ const Description = () => {
             </ChakraProvider> */}
             </div>
           </div>
-          <div className={style.titlediv}>
+          <div
+            className={style.titlediv}
+            style={{ paddingTop: "40px", paddingLeft: "10px" }}
+          >
             <div className={style.title}>
-              <h1 id="title">
+              <h1
+                style={{
+                  fontSize: "25px",
+                  fontWeight: "700",
+                  lineHeight: "26px",
+                  paddingBottom: "10px",
+                  paddingTop: "13px",
+                }}
+                id="title"
+              >
                 BLive Electric Bike Tours – Countryside Escape to Varca
               </h1>
             </div>
@@ -131,98 +143,175 @@ const Description = () => {
                 </Link>
               </div>
             </div>
-            <p style={{ marginTop: "-20px", marginLeft: "3px" }}>per adult</p>
+            <p style={{ marginTop: "20px", marginLeft: "3px" }}>per adult</p>
 
             <hr style={{ width: "80%", marginLeft: "0px", color: "#e0e0e0" }} />
             <div className={style.mainitem}>
-              <div className={style.item1}>
-                <img src={img1} style={style.titlediv.img1} alt="" />
-              </div>
-              <div className={style.item2}>
-                <span style={{ marginLeft: "5px", marginTop: "-5px" }}>
+              <div style={{ display: "flex", marginTop: "10px" }}>
+                <img
+                  src={img1}
+                  style={{ height: "17px", width: "17px", marginTop: "4px" }}
+                  alt=""
+                />
+                <p
+                  style={{
+                    // marginLeft: "5px",
+                    // marginTop: "-5px",
+                    marginLeft: "5px",
+                  }}
+                >
+                  {" "}
                   Lowest price guarantee
-                </span>
+                </p>
               </div>
             </div>
 
             <div className={style.mainitem}>
-              <div className={style.item1}>
-                <img src={img2} style={style.titlediv.img2} alt="" />
-              </div>
-              <div className={style.item2}>
-                <span style={{ marginLeft: "5px", marginTop: "-5px" }}>
+              <div style={{ display: "flex", marginTop: "-34px" }}>
+                {" "}
+                <img
+                  src={img2}
+                  style={{ height: "17px", width: "17px", marginTop: "4px" }}
+                  alt=""
+                />
+                <p style={{ marginLeft: "5px", marginTop: "-1px" }}>
                   Free cancellation
-                </span>
+                </p>
               </div>
             </div>
 
             <div className={style.mainitem}>
-              <div className={style.item1}>
-                <img src={img3} style={style.titlediv.img3} alt="" />
-              </div>
-              <div className={style.item2}>
-                <span style={{ marginLeft: "5px", marginTop: "-5px" }}>
+              <div style={{ display: "flex", marginTop: "-34px" }}>
+                <img
+                  style={{
+                    height: "17px",
+                    width: "17px",
+                    marginTop: "4px",
+                    marginRight: "5px",
+                  }}
+                  src={img3}
+                  alt=""
+                />
+                <p className={{ marginLeft: "15px", marginTop: "-5px" }}>
                   Reserve now & pay later
-                </span>
+                </p>
               </div>
+              <div className={style.item2}></div>
             </div>
 
             <div className={style.mainitem}>
-              <div className={style.item1}>
-                <img src={img4} style={style.titlediv.img4} alt="" />
-              </div>
-              <div className={style.item2}>
-                <span style={{ marginLeft: "5px", marginTop: "-5px" }}>
+              <div style={{ display: "flex", marginTop: "-34px" }}>
+                <img
+                  src={img4}
+                  style={{
+                    height: "17px",
+                    width: "17px",
+                    marginTop: "4px",
+                    marginRight: "5px",
+                  }}
+                  alt=""
+                />
+                <p className={{ marginLeft: "5px", marginTop: "-5px" }}>
                   Ages 12-70, max of 10 per group
-                </span>
+                </p>
               </div>
+              <div className={style.item2}></div>
             </div>
 
             <div className={style.mainitem}>
-              <div className={style.item1}>
-                <img src={img5} style={style.titlediv.img5} alt="" />
-              </div>
-              <div className={style.item2}>
-                <span style={{ marginLeft: "5px", marginTop: "-5px" }}>
+              <div style={{ display: "flex", marginTop: "-34px" }}>
+                <img
+                  src={img5}
+                  style={{ height: "17px", width: "17px", marginTop: "-2px" }}
+                  alt=""
+                />
+                <p style={{ marginLeft: "5px", marginTop: "-5px" }}>
                   Duration:2h 30m
-                </span>
+                </p>
               </div>
+              <div className={style.item2}></div>
             </div>
             <div className={style.mainitem}>
-              <div className={style.item1}>
-                <img src={img6} style={style.titlediv.img6} alt="" />
+              <div style={{ display: "flex", marginTop: "-34px" }}>
+                <img
+                  src={img6}
+                  style={{ height: "17px", width: "17px", marginTop: "4px" }}
+                  alt=""
+                />
+                <p
+                  className={{
+                    marginLeft: "6px",
+                    marginTop: "-25px",
+                    marginRight: "5px",
+                  }}
+                >
+                  {" "}
+                  Ticket type:Mobile
+                </p>
               </div>
-              <div className={style.item2}>
-                <span style={{ marginLeft: "5px", marginTop: "-5px" }}>
+              {/* <div className={style.item2}>
+                <span >
                   Ticket type:Mobile
                 </span>
-              </div>
+              </div> */}
             </div>
             <div className={style.mainitem}>
-              <div className={style.item1}>
-                <img src={img7} style={style.titlediv.img7} alt="" />
-              </div>
-              <div className={style.item2}>
-                <span style={{ marginLeft: "5px", marginTop: "-5px" }}>
+              <div style={{ display: "flex", marginTop: "-34px" }}>
+                <img
+                  src={img7}
+                  style={{
+                    height: "17px",
+                    width: "17px",
+                    marginTop: "4px",
+                    marginRight: "5px",
+                  }}
+                  alt=""
+                />
+                <p className={{ marginLeft: "8px", marginTop: "-5px" }}>
                   English
-                </span>
+                </p>
               </div>
+              <div className={style.item2}></div>
             </div>
 
             <br />
           </div>
         </div>
-        <h2 style={{ textAlign: "left", marginLeft: "15px" }}>About</h2>
+        <h2
+          style={{
+            textAlign: "left",
+            fontSize: "26px",
+            fontWeight: "700",
+            marginLeft: "15px",
+          }}
+        >
+          About
+        </h2>
         <div className={style.about}>
           <div className={style.abt1}>
-            <h4>Know before you go</h4>
+            <h4
+              style={{
+                textAlign: "left",
+                fontSize: "17px",
+                fontWeight: "700",
+                marginLeft: "15px",
+              }}
+            >
+              Know before you go
+            </h4>
             <p style={{ textAlign: "left", marginLeft: "15px" }}>
               Duration: 2h 30m <br /> Mobile tickets accepted <br /> Instant
               confirmation
             </p>
           </div>
           <div className={style.abt2}>
-            <h4 style={{ textAlign: "left", marginLeft: "0px" }}>
+            <h4
+              style={{
+                textAlign: "left",
+                fontSize: "17px",
+                fontWeight: "700",
+              }}
+            >
               Cancellation policy
             </h4>
             <p>
@@ -231,14 +320,28 @@ const Description = () => {
             </p>
           </div>
           <div className={style.abt3}>
-            <h4 style={{ textAlign: "left", marginLeft: "0px" }}>
+            <h4
+              style={{
+                textAlign: "left",
+                fontSize: "17px",
+                fontWeight: "700",
+              }}
+            >
               Available languages
             </h4>
             <p style={{ textAlign: "left", marginLeft: "0px" }}>English</p>
           </div>
         </div>
         <div style={{ textAlign: "left", marginLeft: "15px" }}>
-          <h3>What to expect </h3>
+          <h3
+            style={{
+              textAlign: "left",
+              fontSize: "17px",
+              fontWeight: "700",
+            }}
+          >
+            What to expect{" "}
+          </h3>
           <h4>Itinerary </h4>
           <p>This is a typical itinerary for this product</p>
 
@@ -266,18 +369,26 @@ const Description = () => {
               height: "50px",
               width: "250px",
               // marginLeft: "30px",
-              marginTop: "5px",
+              margin: "10px",
               backgroundColor: "white",
               //   border: "none",
               cursor: "pointer",
+              border: "1px solid black",
             }}
           >
-            <p style={{ fontSize: "18px", marginTop: "10px" }}>
-              View more information
-            </p>
+            <p style={{ fontSize: "18px" }}>View more information</p>
           </button>
 
-          <h4>Important information</h4>
+          <h4
+            style={{
+              textAlign: "left",
+              fontSize: "26px",
+              fontWeight: "600",
+              // marginLeft: "15px",
+            }}
+          >
+            Important information
+          </h4>
 
           <b>Inclusions</b>
           <li>
@@ -311,13 +422,15 @@ const Description = () => {
               height: "50px",
               width: "250px",
               // marginLeft: "30px",
+              border: "1px solid",
               marginTop: "25px",
               backgroundColor: "white",
               //   border: "none",
               cursor: "pointer",
+              margin: "10px",
             }}
           >
-            <p style={{ fontSize: "18px", marginTop: "10px" }}>View details</p>
+            <p style={{ fontSize: "18px" }}>View details</p>
           </button>
 
           <br />
@@ -325,14 +438,31 @@ const Description = () => {
           <br />
           <br />
 
-          <img src={bnner2} alt="" />
+          <img style={{ height: "160px", width: "94%" }} src={bnner2} alt="" />
 
           <br />
           <br />
 
-          <h4>Travel safe during COVID-19</h4>
+          <h4
+            style={{
+              textAlign: "left",
+              fontSize: "26px",
+              fontWeight: "600",
+              // marginLeft: "15px",
+            }}
+          >
+            Travel safe during COVID-19
+          </h4>
           <p>Last updated: Dec 2, 2020</p>
-          <h4>
+          <h4
+            style={{
+              textAlign: "left",
+              fontSize: "18px",
+              fontWeight: "600",
+              marginTop: "20px",
+              // marginLeft: "15px",
+            }}
+          >
             A note from BLive Electric Bike Tours – Countryside Escape to Varca
           </h4>
 
@@ -344,7 +474,17 @@ const Description = () => {
             Regular temperature and health checks.
           </p>
 
-          <h4>What you can expect during your visit</h4>
+          <h4
+            style={{
+              textAlign: "left",
+              fontSize: "18px",
+              fontWeight: "600",
+              marginTop: "20px",
+              // marginLeft: "15px",
+            }}
+          >
+            What you can expect during your visit
+          </h4>
 
           <li>Regular temperature checks for staff</li>
           <li>Regularly sanitized high-traffic areas</li>
@@ -360,11 +500,11 @@ const Description = () => {
               backgroundColor: "white",
               //   border: "none",
               cursor: "pointer",
+              border: "1px solid",
+              margin: "10px",
             }}
           >
-            <p style={{ fontSize: "18px", marginTop: "10px" }}>
-              View all safety measures
-            </p>
+            <p style={{ fontSize: "18px" }}>View all safety measures</p>
           </button>
         </div>
         <div>
@@ -374,14 +514,15 @@ const Description = () => {
         </div>
         <br />
         <br />
-        <img
-          style={{ width: "95%", marginLeft: "-20px" }}
-          src={bnner1}
-          alt=""
-        />
+        <img style={{ width: "93%", marginLeft: "40px" }} src={bnner1} alt="" />
 
         <img
-          style={{ width: "95%", marginTop: "60px", marginLeft: "-40px" }}
+          style={{
+            width: "95%",
+            marginTop: "60px",
+            marginLeft: "40px",
+            height: "400px",
+          }}
           src={bottom}
           alt=""
         />

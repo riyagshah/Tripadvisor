@@ -10,7 +10,11 @@ const Checkout = () => {
     <div>
       <div>
         {" "}
-        <img src={CheckoutNav} alt="" />
+        <img
+          style={{height: "160px", width: "80%",marginLeft:"140px" }}
+          src={CheckoutNav}
+          alt=""
+        />
       </div>
       <p
         style={{
@@ -24,16 +28,18 @@ const Checkout = () => {
       >
         {"<"} Back to Cart
       </p>
-      <h1
+      <p
         style={{
           textAlign: "left",
           margin: "20px",
-          marginLeft: "150px",
+          marginLeft: "160px",
           marginTop: "50px",
+          fontweight: "800",
+          fontSize: "24px",
         }}
       >
         Secure Checkout
-      </h1>
+      </p>
       <div
         style={{
           height: "50px",
@@ -59,6 +65,7 @@ const Checkout = () => {
                   width: "200px",
                   borderRadius: "3px",
                   borderColor: "#e0e0e0",
+                  border: "1px solid",
                 }}
                 type="text"
               />
@@ -70,6 +77,7 @@ const Checkout = () => {
                   height: "40px",
                   width: "200px",
                   borderRadius: "3px",
+                  border: "1px solid",
                   borderColor: "#e0e0e0",
                 }}
                 type="text"
@@ -81,10 +89,12 @@ const Checkout = () => {
             Receive text message updates about your booking. Message rates may
             apply.
           </span>
-          <p style={{ fontWeight: "700", fontSize: "25px" }}>
+          <p style={{ fontWeight: "700", fontSize: "25px", marginTop: "20px" }}>
             Traveler Details
           </p>
-          <p style={{ fontWeight: "700" }}>Lead Traveler</p>
+          <p style={{ fontWeight: "700", marginBottom: "20px" }}>
+            Lead Traveler
+          </p>
           <div
             className="emaildiv"
             style={{ display: "flex", gap: "90px", marginTop: "-15px" }}
@@ -97,6 +107,7 @@ const Checkout = () => {
                   width: "200px",
                   borderRadius: "3px",
                   borderColor: "#e0e0e0",
+                  border: "1px solid",
                 }}
                 type="text"
               />
@@ -109,6 +120,7 @@ const Checkout = () => {
                   width: "200px",
                   borderRadius: "3px",
                   borderColor: "#e0e0e0",
+                  border: "1px solid",
                 }}
                 type="text"
               />
@@ -148,19 +160,26 @@ const Checkout = () => {
                   border: "1px solid black",
                   borderRadius: "5px",
                   width: "100%",
+                  height: "340px",
                 }}
               >
-                <h3 style={{ textAlign: "left", margin: "20px" }}>
+                <h3
+                  style={{
+                    textAlign: "left",
+                    margin: "20px",
+                    fontWeight: "700",
+                  }}
+                >
                   Review Order Details
                 </h3>
                 <div key={item.id} style={{ display: "flex" }}>
                   <div>
-                    <div>
+                    <div style={{ marginRight: "30px", marginTop: "-20px" }}>
                       <img
                         style={{
-                          height: "120px",
-                          width: "120px",
-                          margin: "20px",
+                          height: "130px",
+                          width: "200px",
+                          // margin: "20px",
                         }}
                         src={item.image}
                         alt=""
@@ -171,7 +190,14 @@ const Checkout = () => {
                   <div>
                     <div style={{}}>
                       {" "}
-                      <h4 style={{ textAlign: "left", width: "70%" }}>
+                      <h4
+                        style={{
+                          textAlign: "left",
+                          width: "90%",
+                          marginBottom: "13px",
+                          fontWeight: "600",
+                        }}
+                      >
                         {item.title}
                       </h4>
                     </div>
@@ -194,7 +220,7 @@ const Checkout = () => {
                             color: "black",
                             fontWeight: "400",
                             fontSize: "14px",
-                            marginLeft: "-10px",
+                            marginLeft: "-25px",
                           }}
                         >
                           (355 reviews)
@@ -203,10 +229,12 @@ const Checkout = () => {
                     </div>
                     <p
                       style={{
-                        marginTop: "-10px",
                         textAlign: "left",
                         fontSize: "13px",
                         width: "70%",
+                        marginTop: "1px",
+                        marginBottom: "10px",
+                        lineHeight: "18px",
                       }}
                     >
                       B:Live E-bike Tours - Village - 08:00
@@ -217,6 +245,7 @@ const Checkout = () => {
                         textAlign: "left",
                         fontSize: "13px",
                         width: "70%",
+                        marginBottom: "10px",
                       }}
                     >
                       Sunday, July 24, 2022 | 08:00:00
@@ -230,14 +259,14 @@ const Checkout = () => {
                     <p
                       style={{
                         marginRight: "105px",
-                        width: "100px",
+                        width: "130px",
                         textAlign: "left",
-                        marginLeft: "50px",
+                        marginLeft: "20px",
                       }}
                     >
                       Booking Fee
                     </p>{" "}
-                    <p>$00.00</p>
+                    <p style={{ marginLeft: "-27px" }}>$00.00</p>
                   </div>
 
                   <div
@@ -254,14 +283,13 @@ const Checkout = () => {
                         width: "100px",
                         textAlign: "left",
                         // marginLeft: "155px",
-                        marginTop: "-10px",
+                        marginTop: "0px",
+                        marginLeft: "-28px",
                       }}
                     >
                       Subtotal
                     </p>{" "}
-                    <p style={{ marginTop: "-10px", textAlign: "right" }}>
-                      ${item.price}
-                    </p>
+                    <p style={{ textAlign: "right" }}>${item.price}</p>
                   </div>
                   {/* <hr style={{ marginTop: "-10px" }}></hr> */}
                   <div style={{ display: "flex", marginLeft: "50px" }}>
@@ -271,15 +299,16 @@ const Checkout = () => {
                         width: "100px",
                         textAlign: "left",
                         // marginLeft: "105px",
-                        marginTop: "-10px",
+                        // marginTop: "-10px",
                         fontWeight: "700",
+                        marginLeft: "-29px",
                       }}
                     >
                       Total :
                     </p>{" "}
                     <p
                       style={{
-                        marginTop: "-10px",
+                        // marginTop: "-10px",
                         fontWeight: "700",
                         textAlign: "right",
                       }}
@@ -323,22 +352,29 @@ const Checkout = () => {
               >
                 {/* <img src="" alt="" /> */}
                 <i
-                  style={{ marginTop: "2rem",marginLeft: "5px", }}
+                  style={{ marginTop: "2rem", marginLeft: "5px" }}
                   class="fa fa-credit-card"
                   aria-hidden="true"
                 ></i>
 
-                <div style={{ marginLeft: "20px",textAlign:"left" }}>
+                <div style={{ marginLeft: "20px", textAlign: "left" }}>
                   <p
                     style={{
                       fontSize: "15px",
-                      fontWeight: "600",
+                      fontWeight: "700",
                       marginBottom: "10px",
+                      paddingTop: "25px",
                     }}
                   >
                     Lowest price guarantee
                   </p>
-                  <p style={{ marginTop: "-10px" }}>
+                  <p
+                    style={{
+                      marginTop: "-10px",
+                      lineHeight: "18px",
+                      marginBottom: "5px",
+                    }}
+                  >
                     Find it cheaper? We'll refund the difference
                   </p>
                 </div>
@@ -353,24 +389,20 @@ const Checkout = () => {
               >
                 {/* <img src="" alt="" /> */}
                 {/* <i class="fa-light fa-lock"></i> */}
-                <i
-                  style={{ marginTop: "2rem",marginLeft: "5px" }}
-                  class="fa fa-lock"
-                  aria-hidden="true"
-                ></i>
 
-                <div style={{ marginLeft: "25px",textAlign:"left" }}>
+                <div style={{ marginLeft: "25px", textAlign: "left" }}>
                   <p
                     style={{
                       fontSize: "15px",
-                      fontWeight: "600",
-                      marginBottom: "10px",
-                     
+                      fontWeight: "700",
+                      // marginBottom: "10px",
+                      marginTop: "10px",
+                      fontweight: "700",
                     }}
                   >
                     Privacy protection
                   </p>
-                  <p style={{ marginTop: "-10px" }}>
+                  <p style={{ lineHeight: "17px" }}>
                     We use SSL encryption to keep your data secure
                   </p>
                 </div>
@@ -379,28 +411,29 @@ const Checkout = () => {
                 style={{
                   margin: "10px",
                   marginTop: "-20px",
-                  display: "flex",
+
                   // height: "200",
                 }}
               >
-                <img src="" alt="" />
-                <i
-                  style={{ marginTop: "2rem",marginLeft: "5px" }}
-                  class="fa fa-headphones"
-                  aria-hidden="true"
-                ></i>
-
-                <div style={{ marginLeft: "20px",textAlign:"left" }}>
+                <div style={{ marginLeft: "20px", textAlign: "left" }}>
                   <p
                     style={{
                       fontSize: "15px",
-                      fontWeight: "600",
+                      fontWeight: "700",
                       marginBottom: "10px",
+                      marginTop: "30px",
+                      marginLeft: "5px",
                     }}
                   >
                     24/7 global support
                   </p>
-                  <p style={{ marginTop: "-10px" }}>
+                  <p
+                    style={{
+                      marginTop: "-10px",
+                      marginLeft: "5px",
+                      lineHeight: "18px",
+                    }}
+                  >
                     Get the answers you need, when you need them
                   </p>
                 </div>
@@ -409,24 +442,20 @@ const Checkout = () => {
                 style={{
                   margin: "10px",
                   marginTop: "-20px",
-                  display: "flex",
+                  // display: "flex",
                   // height: "200",
                 }}
               >
                 {/* <img src="" alt="" /> */}
-                <i
-                  style={{ marginTop: "2rem", height: "50px",marginLeft: "5px" }}
-                  class="fa fa-phone"
-                  aria-hidden="true"
-                ></i>
 
-                <div style={{ marginLeft: "22px",textAlign:"left" }}>
+                <div style={{ marginLeft: "22px", textAlign: "left" }}>
                   <p
                     style={{
                       fontSize: "15px",
-                      fontWeight: "600",
+                      fontWeight: "700",
                       marginBottom: "10px",
                       textAlign: "left",
+                      marginTop: "30px",
                     }}
                   >
                     Give us a call
@@ -436,11 +465,12 @@ const Checkout = () => {
                       marginTop: "-10px",
                       marginLeft: "px",
                       textAlign: "left",
+                      lineHeight: "18px",
                     }}
                   >
                     We’d be happy to help you out with your booking
                   </p>
-                  <p style={{ marginTop: "-10px" }}>
+                  <p style={{ marginTop: "20px" }}>
                     {" "}
                     <u> Call now: +1 855 275 5071</u>
                   </p>
