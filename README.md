@@ -37,7 +37,32 @@ Tripadvisor.com is leading travel sugessions website for all type of trips and t
 
 ## Screenshots
 
-//To be Added
+HomePage:
+
+![image](https://user-images.githubusercontent.com/101579810/180704706-3b99781e-afc7-4201-8387-0f1ee5efcbd9.png)
+![image](https://user-images.githubusercontent.com/101579810/180704835-ea3a12a1-7c28-4e03-8c26-7011d67b39f7.png)
+
+Sign-Up:
+![image](https://user-images.githubusercontent.com/101579810/180708618-90be2295-a852-46e3-bc8d-ce4fa5c7c21c.png)
+
+Login:
+![image](https://user-images.githubusercontent.com/101579810/180708767-2ac76a41-1340-4c80-8952-d9cc86b7d0f6.png)
+
+Things to do page:
+![image](https://user-images.githubusercontent.com/101579810/180708869-f6b6d659-4b00-4b81-8bce-485b484ffc3c.png)
+![image](https://user-images.githubusercontent.com/101579810/180708941-dfa2b474-9918-4dc8-9280-0a252c25fa3a.png)
+
+Description page:
+![image](https://user-images.githubusercontent.com/101579810/180709048-a7d6510a-32a0-4e67-9e91-127fdff013f8.png)
+
+Add to Cart:
+![image](https://user-images.githubusercontent.com/101579810/180709114-9baa0244-f136-4778-9959-613c4346e7ed.png)
+
+Payment page:
+![image](https://user-images.githubusercontent.com/101579810/180709580-5e38cbb8-0132-444c-a2cd-06d2d0c4a2dd.png)
+
+
+
 
 ## Challenges
 
