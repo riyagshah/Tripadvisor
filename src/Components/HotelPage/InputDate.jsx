@@ -33,7 +33,7 @@ const InputDate = () => {
             style={{
               padding: "10px",
               height: "100%",
-              maxWidth: "168px",
+              maxWidth: "40px",
               background: "#ffffff",
               margin: "0px",
             }}
@@ -69,7 +69,7 @@ const InputDate = () => {
             style={{
               padding: "10px",
               height: "100%",
-              maxWidth: "168px",
+              maxWidth: "40px",
               background: "#ffffff",
               margin: "0px",
             }}
@@ -103,7 +103,7 @@ const InputDate = () => {
             style={{
               padding: "10px",
               height: "100%",
-              maxWidth: "168px",
+              maxWidth: "40px",
               background: "#ffffff",
               margin: "0px",
             }}

@@ -104,10 +104,10 @@ if(over)
         <div id="bottom-nav-container">
             <ul class="nav-link-container">
                 <li class="bottom-nav-link">
-                    <a href="/">
+                    <Link to="/hotels">
                         <span className='up'>Hotels</span>
                         <span> <FontAwesomeIcon icon={faBed} /></span>
-                    </a>
+                    </Link>
                 </li>
                 <li class="bottom-nav-link">
                     <a href="/">
