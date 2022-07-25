@@ -1,3 +1,4 @@
+/* eslint-disable no-const-assign */
 import React, { useEffect,useState } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
@@ -52,17 +53,37 @@ const Body = () => {
 
   const handleChange = (e) => {
     e.preventDefault()
-    let newCategory = [...category];
+    let newCategory = [...hotelsData];
     const option = e.target.value;
 
-    if (category.includes(option)) {
+    console.log(newCategory)
+  };
+
+
+  const [checked, setChecked] = useState(true); 
+  const handleClick = (e) => { 
+    e.preventDefault()
+    setChecked(!checked); 
+    let newCategory = [...category];
+    const option = e.target.value;
+    if(checked){
       newCategory.splice(newCategory.indexOf(option), 1);
-    } else {
+    }
+    else {
       newCategory.push(option);
     }
     setCategory(newCategory);
-  };
+    console.log(newCategory);
+  }; 
 
+  // return items.filter((item) => {
+  //   /*
+  //   // in here we check if our region is equal to our c state
+  //   // if it's equal to then only return the items that match
+  //   // if not return All the countries
+  //   */
+  //      if (item.region == filterParam) {
+  //          return searchParam.some((newItem) => {
 
   useEffect(() => {
     if (hotelsData?.length === 0) {
@@ -76,7 +97,6 @@ const Body = () => {
       category && (params.category = category);
       setSearchParams(params);
     }
-     // eslint-disable-next-line
   }, [category, searchParams]);
 
   return (
@@ -99,7 +119,7 @@ const Body = () => {
           <Subheading>Deals</Subheading>
           <UnorderedList>
             <ListItem>
-              <Checkbox size="md" colorScheme="green">
+              <Checkbox size="md" colorScheme="green" value="isFreeCancellation" onChange={(e) => handleClick(e)}>
                 {" "}
                 Free cancellation{" "}
               </Checkbox>
@@ -353,7 +373,7 @@ const Body = () => {
           hotelsData.map((hotel) => {
             return (
               <>
-                <Box h="280px" w="100" bg="#ffffff">
+                <Box h="280px" w="100" bg="#ffffff"  key={hotel.id} >
                   <Flex>
                     <Image
                       mh="280px"
