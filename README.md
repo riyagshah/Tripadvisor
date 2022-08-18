@@ -4,7 +4,7 @@ This was our project for Unit-5 Construct week at Masai Shcool.
 Our mian objective was to complete all main functionality of this e-commerce website by using such as sing up to till to the buying of a product React,JavaScript, HTML and CSS.
 We have completed this project in 5 days.
 
-- [Click here](https://tripadvisor-frail-power-8560.netlify.app/) to see preview of our project.
+- [Click here](https://tripadvisorclonefrail-power-8560.netlify.app/) to see preview of our project.
 
 Tripadvisor.com is leading travel sugessions website for all type of trips and travels around the various cities all over the world.
 
